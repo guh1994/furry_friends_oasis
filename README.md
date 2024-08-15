@@ -1,2 +1,2 @@
 # furry_friends_oasis
-Pet care center, to give your pet with the bests employee to give a lot of love and kindness
+Pet daycare, the place where your pet will receive the best care, lots of love, and affection.
