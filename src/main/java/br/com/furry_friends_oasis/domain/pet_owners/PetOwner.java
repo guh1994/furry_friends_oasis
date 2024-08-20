@@ -10,6 +10,7 @@ public class PetOwner {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_owner")
     private Long id;
     private String name;
     private String email;
@@ -19,8 +20,8 @@ public class PetOwner {
     public PetOwner(RegisterPetOwnerData petOwnerDTO) {
         this.name = petOwnerDTO.name();
         this.email = petOwnerDTO.email();
+        this.phoneNumber = petOwnerDTO.phoneNumber();
         this.photoOwnerUrl = petOwnerDTO.photoOwnerUrl();
-        this.phoneNumber = petOwnerDTO.photoOwnerUrl();
     }
 
 }
