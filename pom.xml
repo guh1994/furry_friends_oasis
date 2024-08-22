@@ -10,7 +10,7 @@
     </parent>
     <groupId>br.com.furry_friends_oasis</groupId>
     <artifactId>furry_friends_oasis</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>Furry Friends Oasis</name>
     <description>Pet daycare, the place where your pet will receive the best care, lots of love, and affection.
     </description>
