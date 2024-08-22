@@ -47,6 +47,24 @@ class PetOwnerControllerTest {
     }
 
     @Test
+    void testRegister_shouldReturnBadRequestWithBodyInvalid() throws Exception {
+        var registerData = new RegisterPetOwnerData(
+                "",
+                "",
+                "",
+                "http://link-to-my-photo"
+        );
+
+        var response = mvc.perform(post("/owners")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(registerPetOwnerDataJson.write(registerData).getJson()))
+                .andReturn().getResponse();
+
+        assertThat(response.getStatus())
+                .isEqualTo(HttpStatus.BAD_REQUEST.value());
+    }
+
+    @Test
     void testRegister_shouldReturnCreatedWithValidBody() throws Exception {
         var registerData = new RegisterPetOwnerData(
                 "Owner name",
