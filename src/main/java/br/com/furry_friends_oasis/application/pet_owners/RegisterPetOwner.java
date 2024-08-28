@@ -4,8 +4,8 @@ import br.com.furry_friends_oasis.domain.pet_owners.PetOwner;
 import br.com.furry_friends_oasis.domain.pet_owners.PetOwnerDetails;
 import br.com.furry_friends_oasis.domain.pet_owners.RegisterPetOwnerData;
 import br.com.furry_friends_oasis.persistence.OwnersRepository;
-import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class RegisterPetOwner {
