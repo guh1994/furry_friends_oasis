@@ -21,15 +21,32 @@
                 <constraints nullable="false" unique="true"/>
             </column>
             <column name="link_picture" type="varchar(255)"/>
-
         </createTable>
-<!--        <createTable tableName="tutor" />-->
-<!--        <createTable tableName="activity" />-->
-<!--        <createTable tableName="daily_register" />-->
-<!--        <createTable tableName="collaborator_employee" />-->
-<!--        <createTable tableName="breed" />-->
-<!--        <createTable tableName="environment" />-->
-
     </changeSet>
+
+    <changeSet id="2" author="flavio.lima">
+        <!--        <createTable tableName="tutor" />-->
+        <createTable tableName="owners">
+            <column name="id_owner" type="serial">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false" unique="false"/>
+            </column>
+            <column name="email" type="varchar(128)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="phone_number" type="varchar(64)">
+                <constraints nullable="false" unique="false"/>
+            </column>
+            <column name="photo_owner_url" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+    <!--        <createTable tableName="activity" />-->
+    <!--        <createTable tableName="daily_register" />-->
+    <!--        <createTable tableName="collaborator_employee" />-->
+    <!--        <createTable tableName="breed" />-->
+    <!--        <createTable tableName="environment" />-->
 
 </databaseChangeLog>
